@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/back">
+
+    <TextView
+        android:id="@+id/notificationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:background="@color/dominant_color"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/keepnotes"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clockTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Time"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/secondary_color"/>
+
+    <EditText
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="30dp"
+        android:textColorHint="@color/secondary_color"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/addButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_note"
+            android:backgroundTint="@color/dominant_color"
+            android:layout_weight="1"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/updateButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update"
+            android:backgroundTint="@color/dominant_color"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:backgroundTint="@color/accent_colors"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/Alarmbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_access_alarms_24"
+            android:background="@drawable/button_background"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
+        android:padding="16dp"
+        android:cacheColorHint="@color/secondary_color"
+        android:background="#90FFFFFF"/>
+</LinearLayout>
